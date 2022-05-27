@@ -44,6 +44,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "production-tasks": [
+            "php artisan config:cache",
+            "php artisan route:cache",
+            "php artisan migrate --force"
         ]
     },
     "extra": {
